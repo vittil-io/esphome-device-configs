@@ -6,6 +6,8 @@ substitutions:
   version: 1.0.0
   # The slug this model publishes under on fw.jethome.com; ${name} is the user's to rename.
   fw_device: jxd-r6-e1eth-lcd
+  # Vittil (https://vittil.io): the project key from Settings in the Vittil app, yours to set.
+  vittil_project_key: ecr_your_project_key
   # Paths relative to this file.
   assets: ../../assets
   components: ../../components
@@ -24,6 +26,7 @@ packages:
   climate_editor: !include ${features}/climate-editor.yaml
   climates: !include ${features}/climates.yaml
   crash_report: !include ${features}/crash-report.yaml
+  vittil: !include ${features}/vittil.yaml
   display_off: !include ${features}/display-off.yaml
   entity_settings: !include ${features}/entity-settings.yaml
   factory_reset: !include ${features}/factory-reset.yaml

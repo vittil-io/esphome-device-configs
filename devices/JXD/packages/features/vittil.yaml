@@ -1,0 +1,11 @@
+# Vittil: crash reports from ESP32 devices in the field (https://vittil.io).
+# When a device crashes, the full coredump uploads on the next boot and is
+# decoded against this build's ELF: cause, backtrace with file and line, the
+# task, registers and the last log lines. One external component, one key:
+# ${vittil_project_key} in the device config's substitutions.
+external_components:
+  - source: github://vittil-io/vittil
+    components: [vittil]
+
+vittil:
+  project_key: ${vittil_project_key}

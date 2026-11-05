@@ -164,6 +164,9 @@ external_components:
       path: components
     components:
       - crash_report
+  - source: github://vittil-io/vittil
+    components:
+      - vittil
   - source:
       type: git
       url: https://github.com/jethome-iot/esphome-device-configs.git
@@ -1334,6 +1337,8 @@ climate_hub:
     sorting_group_id: group_climate
 crash_report:
   storage: user_storage
+vittil:
+  project_key: ${vittil_project_key}
 select:
   - platform: template
     id: display_off_timer_select
@@ -2240,3 +2245,4 @@ substitutions:
   name: jxd-r6-e1eth-lcd
   friendly_name: JXD-R6-E1ETH-LCD
   version: 1.0.0
+  vittil_project_key: ecr_your_project_key
